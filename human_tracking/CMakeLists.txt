@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(human_tracking)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11 -O3)
+add_compile_options(-std=c++11 -O3 -W)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -216,7 +216,7 @@ include
 # catkin_add_nosetests(test)
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-set(CMAKE_GXX_FLAGS "-Wall -Wextra -Wconversion  -pedantic -std=gnu11")
+set(CMAKE_GXX_FLAGS "-W -std=gnu11")
 find_package(PCL 1.7 REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
